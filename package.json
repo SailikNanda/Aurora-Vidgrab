@@ -1,0 +1,27 @@
+{
+  "name": "aurora-vidgrab",
+  "version": "1.0.0",
+  "description": "Universal video & audio downloader with a premium dark UI. Powered by yt-dlp + ffmpeg — YouTube, Instagram, TikTok, X, Facebook and 1700+ sites.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "yt-dlp",
+    "youtube-downloader",
+    "video-downloader",
+    "instagram-downloader",
+    "tiktok-downloader",
+    "mp3",
+    "express",
+    "download-manager"
+  ],
+  "author": "Sailik Nanda",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

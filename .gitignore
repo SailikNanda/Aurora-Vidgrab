@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Downloaded media (not part of the source)
+downloads/*
+!downloads/.gitkeep
+
+# Local-only convenience scripts (may contain machine-specific paths)
+start-local.bat
+
+# Env / secrets
+.env
+*.log
+
+# OS junk
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aurora VidGrab</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="aurora-sweep"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <main class="shell">
+    <header class="hero">
+      <div class="logo-badge">
+        <div class="logo-ring"></div>
+        <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+        </svg>
+      </div>
+      <h1>Aurora <span>VidGrab</span></h1>
+      <p class="tagline">Universal video &amp; audio downloader — YouTube · Instagram · TikTok · anything</p>
+    </header>
+
+    <section class="card glass">
+      <div class="field">
+        <label for="url">Paste any link</label>
+        <div class="input-wrap">
+          <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+          <input id="url" type="url" placeholder="https://www.instagram.com/reel/..." autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="seg" id="formatSeg">
+          <button class="seg-btn active" data-format="video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/>
+            </svg>
+            <span>Video</span>
+          </button>
+          <button class="seg-btn" data-format="audio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+            </svg>
+            <span>Audio</span>
+          </button>
+        </div>
+        <div class="select-wrap">
+          <select id="quality" title="Quality">
+            <option value="1080">1080p</option>
+            <option value="720">720p</option>
+            <option value="480">480p</option>
+            <option value="best">Best</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="grab" class="btn-primary">
+        <svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/>
+        </svg>
+        <span class="btn-label">Download</span>
+        <span class="btn-spinner hidden"></span>
+      </button>
+
+      <div id="progressWrap" class="progress-hidden">
+        <div class="progress-meta"><span id="pText">Starting…</span><span id="pPct">0%</span></div>
+        <div class="bar"><div id="pBar" class="bar-fill"></div></div>
+      </div>
+    </section>
+
+    <section id="result" class="card glass result hidden">
+      <div class="res-head">
+        <div id="resBadge" class="res-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/>
+          </svg>
+        </div>
+        <div class="res-info">
+          <div id="resTitle" class="res-title">—</div>
+          <div id="resMeta" class="res-meta"></div>
+        </div>
+      </div>
+      <div id="resPreview" class="preview hidden"><video id="vid" controls playsinline></video></div>
+      <div class="res-actions">
+        <a id="dlBtn" class="btn-primary small" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/>
+          </svg>
+          <span>Save file</span>
+        </a>
+        <button id="openBtn" class="btn-ghost small" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+          </svg>
+          <span>Open folder</span>
+        </button>
+      </div>
+    </section>
+
+    <div id="errBox" class="err hidden">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 8v4"/><path d="M12 16h.01"/>
+      </svg>
+      <span id="errMsg"></span>
+    </div>
+
+    <footer class="foot">
+      <button id="cleanBtn" class="link-btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/>
+        </svg>
+        <span>Clear downloads</span>
+      </button>
+      <span class="dot"></span>
+      <span class="foot-text">Powered by yt-dlp · ffmpeg · Node</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
