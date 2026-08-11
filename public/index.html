@@ -3,31 +3,33 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aurora VidGrab</title>
+<meta name="theme-color" content="#08090a" />
+<title>Aurora VidGrab — Universal Media Downloader</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235e6ad2'/%3E%3Cstop offset='1' stop-color='%237170ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='24' height='24' rx='6' fill='%2308090a'/%3E%3Cpath d='M13 4L5 14h6l-1 6 8-10h-6l1-6z' fill='url(%23g)'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg">
-    <div class="aurora-sweep"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-overlay"></div>
+  <div class="bg" aria-hidden="true">
+    <div class="bg-glow"></div>
+    <div class="bg-grid"></div>
   </div>
 
   <main class="shell">
     <header class="hero">
       <div class="logo-badge">
-        <div class="logo-ring"></div>
-        <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
         </svg>
       </div>
       <h1>Aurora <span>VidGrab</span></h1>
       <p class="tagline">Universal video &amp; audio downloader — YouTube · Instagram · TikTok · anything</p>
+      <div class="pill"><span class="pill-dot"></span>1750+ sites supported · free &amp; open source</div>
     </header>
 
-    <section class="card glass">
+    <section class="card">
       <div class="field">
         <label for="url">Paste any link</label>
         <div class="input-wrap">
@@ -36,18 +38,25 @@
             <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
           </svg>
           <input id="url" type="url" placeholder="https://www.instagram.com/reel/..." autocomplete="off" spellcheck="false" />
+          <button id="pasteBtn" class="paste-btn" type="button" title="Paste from clipboard" aria-label="Paste from clipboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="2" width="8" height="4" rx="1.5"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11v6"/><path d="M9 14h6"/>
+            </svg>
+          </button>
+          <kbd class="enter-hint" aria-hidden="true">Enter ↵</kbd>
         </div>
+        <div class="field-hint">One link per line — paste several for batch · YouTube playlists supported (first 50)</div>
       </div>
 
       <div class="row">
-        <div class="seg" id="formatSeg">
-          <button class="seg-btn active" data-format="video">
+        <div class="seg" id="formatSeg" role="tablist">
+          <button class="seg-btn active" data-format="video" role="tab" aria-selected="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/>
             </svg>
             <span>Video</span>
           </button>
-          <button class="seg-btn" data-format="audio">
+          <button class="seg-btn" data-format="audio" role="tab" aria-selected="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
             </svg>
@@ -55,6 +64,7 @@
           </button>
         </div>
         <div class="select-wrap">
+          <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
           <select id="quality" title="Quality">
             <option value="1080">1080p</option>
             <option value="720">720p</option>
@@ -72,13 +82,19 @@
         <span class="btn-spinner hidden"></span>
       </button>
 
-      <div id="progressWrap" class="progress-hidden">
+      <div id="progressWrap" class="hidden">
         <div class="progress-meta"><span id="pText">Starting…</span><span id="pPct">0%</span></div>
         <div class="bar"><div id="pBar" class="bar-fill"></div></div>
+        <div class="progress-hint">Downloading in the background — you can leave this tab</div>
+      </div>
+
+      <div id="batchWrap" class="hidden">
+        <div class="progress-meta"><span id="batchOverall">Preparing batch…</span><span id="batchCount">0/0</span></div>
+        <div id="batchList" class="batch-list"></div>
       </div>
     </section>
 
-    <section id="result" class="card glass result hidden">
+    <section id="result" class="card result hidden">
       <div class="res-head">
         <div id="resBadge" class="res-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -98,13 +114,28 @@
           </svg>
           <span>Save file</span>
         </a>
-        <button id="openBtn" class="btn-ghost small" type="button">
+        <button id="openBtn" class="btn-ghost" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
           </svg>
           <span>Open folder</span>
         </button>
       </div>
+    </section>
+
+    <section id="batchResult" class="card result hidden">
+      <div class="res-head">
+        <div class="res-badge batch-badge show">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/>
+          </svg>
+        </div>
+        <div class="res-info">
+          <div id="batchResTitle" class="res-title">Batch complete</div>
+          <div id="batchResMeta" class="res-meta"></div>
+        </div>
+      </div>
+      <div id="batchFiles" class="batch-files"></div>
     </section>
 
     <div id="errBox" class="err hidden">
@@ -122,10 +153,35 @@
         <span>Clear downloads</span>
       </button>
       <span class="dot"></span>
-      <span class="foot-text">Powered by yt-dlp · ffmpeg · Node</span>
+      <span class="foot-license">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+        </svg>
+        <span>MIT License</span>
+      </span>
     </footer>
   </main>
 
   <script src="app.js"></script>
+  <script>
+    /* spotlight — cursor-follow luminance on cards */
+    document.querySelectorAll('.card').forEach((card) => {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+    /* empty batch result meta when hidden */
+    const batchResultEl = document.getElementById('batchResult');
+    if (batchResultEl) {
+      new MutationObserver(() => {
+        if (!batchResultEl.classList.contains('hidden')) {
+          batchResultEl.style.setProperty('--mx', '50%');
+          batchResultEl.style.setProperty('--my', '50%');
+        }
+      }).observe(batchResultEl, { attributes: true, attributeFilter: ['class'] });
+    }
+  </script>
 </body>
 </html>

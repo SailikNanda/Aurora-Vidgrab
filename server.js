@@ -1,7 +1,8 @@
 const express = require('express');
-const { spawn } = require('child_process');
+const { spawn, execFileSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 const crypto = require('crypto');
 const readline = require('readline');
 
@@ -10,10 +11,24 @@ const APP = path.join(__dirname, 'public');
 const DL_DIR = path.join(__dirname, 'downloads');
 
 // yt-dlp lookup order:
-//   1. YTDLP_EXE - direct path to a yt-dlp executable
-//   2. YTDLP_PY  - python interpreter that has the yt_dlp module
-//   3. fallback  - 'python' (Windows) / 'python3' (macOS/Linux) from PATH
-const PY = process.env.YTDLP_PY || (process.platform === 'win32' ? 'python' : 'python3');
+//   1. YTDLP_EXE            - direct path to a yt-dlp executable (skips python probe)
+//   2. YTDLP_PY             - python interpreter that has the yt_dlp module
+//   3. common installs      - auto-probed Windows python installs (Python310/311/312…)
+//   4. fallback             - 'python' (Windows) / 'python3' (macOS/Linux) from PATH
+function findYtDlpPython() {
+  const winPythons = Array.from({ length: 5 }, (_, i) => 14 - i) // 314..310
+    .map((v) => path.join(os.homedir(), 'AppData', 'Local', 'Programs', 'Python', `Python3${v}`, 'python.exe'));
+  const candidates = [
+    process.env.YTDLP_PY,
+    ...(process.platform === 'win32' ? winPythons : ['python3']),
+    'python'
+  ].filter(Boolean);
+  for (const c of candidates) {
+    try { execFileSync(c, ['-c', 'import yt_dlp'], { stdio: 'pipe', windowsHide: true }); return c; } catch {}
+  }
+  return process.platform === 'win32' ? 'python' : 'python3';
+}
+const PY = findYtDlpPython();
 const YTDLP_EXE = process.env.YTDLP_EXE || null;
 
 if (!fs.existsSync(DL_DIR)) fs.mkdirSync(DL_DIR, { recursive: true });
@@ -31,16 +46,22 @@ app.use('/api', (req, res, next) => {
 
 const jobs = new Map(); // id -> {status, percent, title, file, error, isAudio}
 
-function newJob(url, options) {
+function newJob(url, options, title) {
   const id = crypto.randomBytes(6).toString('hex');
   const job = {
-    id, url, status: 'queued', percent: 0, title: '', file: null, error: null,
+    id, url, status: 'queued', percent: 0, title: title || '', file: null, error: null,
     format: options.format === 'audio' ? 'audio' : 'video',
     quality: options.quality || '1080',
+    batchId: options.batchId || null,
     createdAt: Date.now()
   };
   jobs.set(id, job);
   return job;
+}
+
+function sizeMbOf(job) {
+  if (!job.file) return null;
+  try { return Math.round((fs.statSync(path.join(DL_DIR, job.file)).size / 1048576) * 10) / 10; } catch { return null; }
 }
 
 function runJob(job) {
@@ -88,13 +109,80 @@ function runJob(job) {
     if (job.file && fs.existsSync(path.join(DL_DIR, job.file))) {
       job.percent = 100;
       job.status = 'done';
-      if (!job.title) job.title = path.basename(job.file, path.extname(job.file));
+      if (!job.title) job.title = path.basename(job.file, path.extname(job.file)).replace(/-\w{11}$/, '');
     } else {
       job.status = 'error';
       if (!job.error) job.error = job.error || `Download failed (exit ${code}). Try another link.`;
     }
   });
 }
+
+const MAX_PLAYLIST = 50; // videos per playlist
+const MAX_TOTAL = 100;   // jobs per batch
+
+// Expand a playlist URL to individual video URLs via yt-dlp flat-playlist JSON
+function expandPlaylist(url) {
+  return new Promise((resolve) => {
+    const base = ['--flat-playlist', '--no-warnings', '-J', url];
+    const { cmd, args } = YTDLP_EXE
+      ? { cmd: YTDLP_EXE, args: base }
+      : { cmd: PY, args: ['-m', 'yt_dlp', ...base] };
+    const child = spawn(cmd, args, { windowsHide: true });
+    let out = '';
+    child.stdout.on('data', (d) => (out += d));
+    child.on('error', () => resolve([]));
+    child.on('close', () => {
+      try {
+        const j = JSON.parse(out);
+        resolve((j.entries || []).slice(0, MAX_PLAYLIST).map((e) => {
+          const u = e.url && /^https?:/i.test(e.url)
+            ? e.url
+            : e.id ? 'https://www.youtube.com/watch?v=' + e.id : null;
+          return u ? { url: u, title: String(e.title || e.id || '').slice(0, 100) } : null;
+        }).filter(Boolean));
+      } catch { resolve([]); }
+    });
+    setTimeout(() => { try { child.kill(); } catch {} }, 30000);
+  });
+}
+
+app.post('/api/batch', async (req, res) => {
+  const raw = (Array.isArray(req.body.urls) ? req.body.urls : [])
+    .map((u) => String(u || '').trim()).filter(Boolean);
+  if (!raw.length) return res.status(400).json({ error: 'Paste at least one link' });
+  const batchId = crypto.randomBytes(6).toString('hex');
+  const jobsList = [];
+  for (const u of raw) {
+    try { const v = new URL(u); if (!/^https?:$/.test(v.protocol)) continue; } catch { continue; }
+    let targets = [{ url: u, title: '' }];
+    if (/[?&]list=/.test(u)) {
+      targets = await expandPlaylist(u);
+      if (!targets.length) continue; // unreadable / private / empty playlist
+    }
+    for (const t of targets) {
+      if (jobsList.length >= MAX_TOTAL) break;
+      jobsList.push(newJob(t.url, { ...req.body, batchId }, t.title));
+      runJob(jobsList[jobsList.length - 1]);
+    }
+    if (jobsList.length >= MAX_TOTAL) break;
+  }
+  if (!jobsList.length) return res.status(400).json({ error: 'No downloadable links found. Private or empty playlists are not supported.' });
+  res.json({ batchId, total: jobsList.length });
+});
+
+app.get('/api/batch/:batchId', (req, res) => {
+  const items = [...jobs.values()].filter((j) => j.batchId === req.params.batchId);
+  if (!items.length) return res.status(404).json({ error: 'Batch not found — the server may have restarted. Press Download again.' });
+  const jobsOut = items.map((j) => ({
+    id: j.id, status: j.status, percent: j.percent, title: j.title,
+    file: j.file, format: j.format, error: j.error, sizeMb: sizeMbOf(j)
+  }));
+  res.json({
+    batchId: req.params.batchId, total: jobsOut.length,
+    done: jobsOut.every((j) => j.status === 'done' || j.status === 'error'),
+    jobs: jobsOut
+  });
+});
 
 app.post('/api/download', (req, res) => {
   const url = (req.body.url || '').trim();
@@ -113,13 +201,9 @@ app.post('/api/download', (req, res) => {
 app.get('/api/status/:id', (req, res) => {
   const job = jobs.get(req.params.id);
   if (!job) return res.status(404).json({ error: 'Job not found — the server may have restarted. Press Download again.' });
-  let sizeMb = null;
-  if (job.file) {
-    try { sizeMb = Math.round((fs.statSync(path.join(DL_DIR, job.file)).size / 1048576) * 10) / 10; } catch {}
-  }
   res.json({
     id: job.id, status: job.status, percent: job.percent, title: job.title,
-    file: job.file, format: job.format, error: job.error, sizeMb
+    file: job.file, format: job.format, error: job.error, sizeMb: sizeMbOf(job)
   });
 });
 
