@@ -18,16 +18,30 @@ const DL_DIR = path.join(__dirname, 'downloads');
 function findYtDlpPython() {
   const winPythons = Array.from({ length: 5 }, (_, i) => 14 - i) // 314..310
     .map((v) => path.join(os.homedir(), 'AppData', 'Local', 'Programs', 'Python', `Python3${v}`, 'python.exe'));
+  
+  // macOS-specific paths for Homebrew and other installers
+  const macPythons = [
+    '/usr/local/bin/python3',      // Homebrew on Intel
+    '/opt/homebrew/bin/python3',   // Homebrew on M1/M2/M3
+    '/usr/bin/python3'              // System Python
+  ];
+  
   const candidates = [
     process.env.YTDLP_PY,
-    ...(process.platform === 'win32' ? winPythons : ['python3']),
-    'python'
+    ...(process.platform === 'win32' ? winPythons : process.platform === 'darwin' ? macPythons : ['python3']),
+    'python',
+    'python3'
   ].filter(Boolean);
+  
   for (const c of candidates) {
-    try { execFileSync(c, ['-c', 'import yt_dlp'], { stdio: 'pipe', windowsHide: true }); return c; } catch {}
+    try { 
+      execFileSync(c, ['-c', 'import yt_dlp'], { stdio: 'pipe', windowsHide: true }); 
+      return c; 
+    } catch {}
   }
   return process.platform === 'win32' ? 'python' : 'python3';
 }
+
 const PY = findYtDlpPython();
 const YTDLP_EXE = process.env.YTDLP_EXE || null;
 
@@ -214,9 +228,27 @@ app.get('/api/file/:name', (req, res) => {
   res.download(p, name);
 });
 
+// Cross-platform folder opener
+function openFolder(folderPath) {
+  if (process.platform === 'darwin') {
+    // macOS: use 'open' command
+    spawn('open', [folderPath]);
+  } else if (process.platform === 'win32') {
+    // Windows: use explorer.exe
+    spawn('explorer.exe', [folderPath], { windowsHide: true });
+  } else {
+    // Linux and other Unix-like systems: use xdg-open
+    spawn('xdg-open', [folderPath]);
+  }
+}
+
 app.get('/api/open', (_req, res) => {
-  spawn('explorer.exe', [DL_DIR], { windowsHide: true });
-  res.json({ ok: true });
+  try {
+    openFolder(DL_DIR);
+    res.json({ ok: true });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to open folder: ' + err.message });
+  }
 });
 
 app.get('/api/clean', (_req, res) => {
