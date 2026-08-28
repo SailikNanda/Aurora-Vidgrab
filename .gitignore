@@ -12,6 +12,9 @@ start-local.bat
 .env
 *.log
 
+# Local tooling / editor artifacts
+.freebuff/
+
 # OS junk
 Thumbs.db
 Desktop.ini

@@ -31,11 +31,39 @@ Built with **Node.js + Express + yt-dlp + ffmpeg**, wrapped in a glassmorphic **
 | Media processing | ffmpeg |
 | Frontend | Vanilla JS + CSS (no framework, no build step) |
 
+## 🖥️ Supported Platforms
+
+Works on **Windows**, **macOS**, and **Linux**. The server is a plain Node.js + Express app with no native GUI, so it runs anywhere Node.js runs. The "Open folder" feature uses the correct OS command per platform (Explorer / Finder / xdg-open).
+
 ## 📦 Requirements
 
 - **Node.js** ≥ 18
 - **Python** ≥ 3.8 with `yt-dlp`: `pip install yt-dlp`
 - **ffmpeg** on PATH (for MP3 conversion / format merging)
+
+### Platform installs
+
+**macOS** (via [Homebrew](https://brew.sh)):
+
+```bash
+brew install node python ffmpeg
+pip3 install yt-dlp
+```
+
+**Linux** (Debian/Ubuntu):
+
+```bash
+sudo apt update
+sudo apt install nodejs npm python3 python3-pip ffmpeg
+pip3 install --user yt-dlp
+```
+
+**Windows**:
+
+1. Install [Node.js](https://nodejs.org) (LTS, ≥ 18)
+2. Install [Python](https://python.org) (check *"Add to PATH"* during install)
+3. Install ffmpeg (e.g. `winget install ffmpeg` or via [chocolatey](https://chocolatey.org): `choco install ffmpeg`)
+4. `pip install yt-dlp`
 
 ## 🚀 Quick Start
 
@@ -55,11 +83,19 @@ npm start
 | `YTDLP_PY` | `python` / `python3` | Python interpreter that has the `yt_dlp` module |
 | `YTDLP_EXE` | *(empty)* | Use a yt-dlp executable directly (e.g. `yt-dlp.exe`) instead of `python -m yt_dlp` |
 
+The server auto-detects the right Python: on Windows it probes common install paths, and on macOS/Linux it falls back to `python3` from PATH. You can override with `YTDLP_PY` if needed.
+
 Example — Windows with a specific Python:
 
 ```bat
 set YTDLP_PY=C:\Path\To\python.exe
 npm start
+```
+
+macOS / Linux with a specific Python:
+
+```bash
+YTDLP_PY=/path/to/python npm start
 ```
 
 ## 🔌 API
@@ -69,7 +105,7 @@ npm start
 | `/api/download` | POST | `{ url, format: "video"\|"audio", quality: "480"\|"720"\|"1080"\|"best" }` → `{ id }` |
 | `/api/status/:id` | GET | `{ status, percent, title, file, sizeMb, error }` |
 | `/api/file/:name` | GET | Download the finished file |
-| `/api/open` | GET | Open the download folder in Explorer/Finder |
+| `/api/open` | GET | Open the download folder in the OS file manager (Explorer / Finder / xdg-open) |
 | `/api/clean` | POST | Delete all downloaded files |
 
 ## 🗺️ Roadmap

@@ -215,7 +215,18 @@ app.get('/api/file/:name', (req, res) => {
 });
 
 app.get('/api/open', (_req, res) => {
-  spawn('explorer.exe', [DL_DIR], { windowsHide: true });
+  // Cross-platform: open the download folder in the OS file manager
+  //   - Windows: explorer
+  //   - macOS:   open
+  //   - Linux:   xdg-open
+  const opener = process.platform === 'win32'
+    ? 'explorer'
+    : process.platform === 'darwin'
+      ? 'open'
+      : 'xdg-open';
+  const child = spawn(opener, [DL_DIR], { windowsHide: true, stdio: 'ignore' });
+  // Ignore spawn errors (e.g. missing opener) so the API still responds cleanly
+  child.on('error', () => {});
   res.json({ ok: true });
 });
 
