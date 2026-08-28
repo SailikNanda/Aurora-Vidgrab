@@ -44,7 +44,19 @@ app.use('/api', (req, res, next) => {
   next();
 });
 
-const jobs = new Map(); // id -> {status, percent, title, file, error, isAudio}
+const jobs = new Map(); // id -> {status, percent, title, file, error}
+let activeDownloads = 0;
+const MAX_CONCURRENT = 3;
+
+// Clean up old jobs to prevent memory leak (keep jobs for 24 hours)
+setInterval(() => {
+  const now = Date.now();
+  for (const [id, job] of jobs.entries()) {
+    if ((job.status === 'done' || job.status === 'error') && (now - job.createdAt > 24 * 60 * 60 * 1000)) {
+      jobs.delete(id);
+    }
+  }
+}, 60 * 60 * 1000); // Check every hour
 
 function newJob(url, options, title) {
   const id = crypto.randomBytes(6).toString('hex');
@@ -64,8 +76,25 @@ function sizeMbOf(job) {
   try { return Math.round((fs.statSync(path.join(DL_DIR, job.file)).size / 1048576) * 10) / 10; } catch { return null; }
 }
 
+function runNextJob() {
+  if (activeDownloads >= MAX_CONCURRENT) return;
+  for (const job of jobs.values()) {
+    if (job.status === 'queued') {
+      runJob(job);
+      if (activeDownloads >= MAX_CONCURRENT) break;
+    }
+  }
+}
+
 function runJob(job) {
   job.status = 'downloading';
+  activeDownloads++;
+
+  const finish = () => {
+    activeDownloads--;
+    runNextJob();
+  };
+
   // forward slashes: backslash paths get mangled by yt-dlp template escaping on Windows
   const outTemplate = DL_DIR.replace(/\\/g, '/') + '/%(title).80s-%(id)s.%(ext)s';
 
@@ -83,6 +112,13 @@ function runJob(job) {
   args.push('--print', 'after_move:filepath', job.url);
 
   const child = spawn(cmd, args, { windowsHide: true });
+
+  child.on('error', (err) => {
+    job.status = 'error';
+    if (!job.error) job.error = `Spawn error: ${err.message}. Is yt-dlp installed?`;
+    finish();
+  });
+
   const rl = readline.createInterface({ input: child.stdout });
 
   rl.on('line', (lineRaw) => {
@@ -106,6 +142,8 @@ function runJob(job) {
   });
 
   child.on('close', (code) => {
+    if (job.status === 'error' && job.error && job.error.startsWith('Spawn error')) return; // already handled
+    
     if (job.file && fs.existsSync(path.join(DL_DIR, job.file))) {
       job.percent = 100;
       job.status = 'done';
@@ -114,6 +152,7 @@ function runJob(job) {
       job.status = 'error';
       if (!job.error) job.error = job.error || `Download failed (exit ${code}). Try another link.`;
     }
+    finish();
   });
 }
 
@@ -162,7 +201,7 @@ app.post('/api/batch', async (req, res) => {
     for (const t of targets) {
       if (jobsList.length >= MAX_TOTAL) break;
       jobsList.push(newJob(t.url, { ...req.body, batchId }, t.title));
-      runJob(jobsList[jobsList.length - 1]);
+      runNextJob();
     }
     if (jobsList.length >= MAX_TOTAL) break;
   }
@@ -194,7 +233,7 @@ app.post('/api/download', (req, res) => {
     return res.status(400).json({ error: 'Invalid URL. Paste a full link (https://...)' });
   }
   const job = newJob(url, req.body || {});
-  runJob(job);
+  runNextJob();
   res.json({ id: job.id });
 });
 

@@ -13,7 +13,6 @@ const batchResult = $('batchResult'), batchFiles = $('batchFiles'), batchResMeta
 
 let format = 'video';
 let pollTimer = null, batchTimer = null;
-let currentFile = null;
 
 formatSeg.querySelectorAll('.seg-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -45,7 +44,6 @@ grabBtn.addEventListener('click', async () => {
   hideErr();
   result.classList.add('hidden'); resPreview.classList.add('hidden');
   batchResult.classList.add('hidden');
-  currentFile = null;
 
   if (urls.length === 1 && !isPlaylist(urls[0])) runSingle(urls[0]);
   else runBatch(urls);
@@ -71,8 +69,8 @@ async function runSingle(url) {
 }
 
 function poll(id) {
-  clearInterval(pollTimer);
-  pollTimer = setInterval(async () => {
+  clearTimeout(pollTimer);
+  const doPoll = async () => {
     try {
       const j = await fetchJSON('/api/status/' + id);
       if (j.percent !== undefined) {
@@ -82,23 +80,23 @@ function poll(id) {
       if (j.title) pText.textContent = j.title.slice(0, 60);
 
       if (j.status === 'done') {
-        clearInterval(pollTimer);
         setBusy(false);
         progressWrap.classList.add('hidden');
         showResult(j);
       } else if (j.status === 'error') {
-        clearInterval(pollTimer);
         setBusy(false);
         progressWrap.classList.add('hidden');
         showErr(j.error || 'Download failed. Try a different link.');
+      } else {
+        pollTimer = setTimeout(doPoll, 900);
       }
     } catch (e) {
-      clearInterval(pollTimer);
       setBusy(false);
       progressWrap.classList.add('hidden');
       showErr(e.message || 'Connection problem. Is the server running?');
     }
-  }, 900);
+  };
+  pollTimer = setTimeout(doPoll, 900);
 }
 
 /* ---------- batch download ---------- */
@@ -154,13 +152,12 @@ async function runBatch(urls) {
 }
 
 function pollBatch(id, total) {
-  clearInterval(batchTimer);
-  batchTimer = setInterval(async () => {
+  clearTimeout(batchTimer);
+  const doPoll = async () => {
     let j;
     try {
       j = await fetchJSON('/api/batch/' + id);
     } catch (e) {
-      clearInterval(batchTimer);
       setBusy(false);
       batchWrap.classList.add('hidden');
       showErr(e.message);
@@ -206,13 +203,15 @@ function pollBatch(id, total) {
       : 'Downloading… ' + (total ? Math.round((doneN / total) * 100) : 0) + '%';
 
     if (j.done) {
-      clearInterval(batchTimer);
       setBusy(false);
       batchWrap.classList.add('hidden');
       if (okN) showBatchResult(j.jobs);
       if (errN && !okN) showErr('All downloads failed. Try different links.');
+    } else {
+      batchTimer = setTimeout(doPoll, 900);
     }
-  }, 900);
+  };
+  batchTimer = setTimeout(doPoll, 900);
 }
 
 function showBatchResult(jobs) {
@@ -272,7 +271,6 @@ function showResult(j) {
   if (badge) badge.classList.add('show');
   dlBtn.href = '/api/file/' + fname + '?dl=1';
   dlBtn.setAttribute('download', j.file);
-  currentFile = j.file;
   result.classList.remove('hidden');
 
   if (j.format === 'video') {
