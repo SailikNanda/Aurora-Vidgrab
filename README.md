@@ -1,52 +1,90 @@
 <div align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="55" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="55" />
+  
+  <br />
+  
   <h1>🌌 Aurora VidGrab</h1>
-  <p><strong>Universal video & audio downloader with a premium dark UI.</strong></p>
+  <p><strong>Premium Universal Video & Audio Downloader</strong></p>
 
   <p>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github" alt="Stars"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/issues"><img src="https://img.shields.io/github/issues/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff" alt="Issues"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-828fff?style=for-the-badge" alt="License"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github&label=Stars" alt="Stars"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/network/members"><img src="https://img.shields.io/github/forks/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Forks"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/issues"><img src="https://img.shields.io/github/issues/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github" alt="Issues"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License"></a>
   </p>
 
-  <p>Paste any link — YouTube, Instagram, TikTok, X (Twitter), Facebook, Reddit and <strong>1750+ more sites</strong> (everything yt-dlp supports) — and grab it as <strong>MP4 video</strong> or <strong>MP3 audio</strong>, right in the browser.</p>
+  <p><em>Download media from <b>1750+ sites</b> including YouTube, Instagram, TikTok, and X, wrapped in a buttery-smooth Aurora Glass UI.</em></p>
 </div>
 
----
+<br />
 
-## ✨ Features
-
-- 🌍 **Universal**: video/audio from any site yt-dlp supports (1750+ extractors)
-- ⚙️ **Video quality picker**: 480p / 720p / 1080p / Best
-- 🎵 **Audio mode**: converts to MP3 via ffmpeg (with quality 0/VBR)
-- 🚀 **Live progress**: real-time percentage and smart concurrent batch downloading
-- 📺 **In-page preview** of the finished video
-- 📂 **Open folder** & **clear downloads** helpers
-- 🎨 **Animated Aurora Glass UI** — rotating aurora borders, shine sweeps, spring pops, pure SVG icons
+> **Note:** If you find this project useful, please consider giving it a ⭐ **Star** on GitHub to show your support!
 
 ---
 
-## 🖥️ Supported Platforms
+## 🚀 Why Aurora VidGrab?
 
-Aurora VidGrab runs perfectly across all major operating systems.
+Aurora VidGrab combines the raw power of **yt-dlp** and **ffmpeg** with a sleek, modern **Node.js** backend and a beautiful **Glassmorphism** frontend. No databases, no bloat—just paste a link and download.
+
+<table>
+<tr>
+<td>
+
+### 🎨 Premium UI
+- **Aurora Glass:** Rotating borders, shine sweeps, spring pops.
+- **Zero Emoji UI:** Pure, crisp SVG icons.
+- **Responsive:** Works beautifully on mobile and desktop.
+- **Live Preview:** Watch your downloaded video right in the browser.
+
+</td>
+<td>
+
+### ⚡ Under the Hood
+- **1750+ Sites:** YouTube, Instagram Reels, TikTok, Reddit, etc.
+- **Smart Queueing:** Concurrent batch downloading without crashing.
+- **Memory Safe:** Auto-cleanup of old jobs and files.
+- **API First:** Pure JSON API, no messy HTML errors.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
-  <img src="https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/yt--dlp-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+  <img src="https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 </p>
+
+---
 
 ## 📦 Requirements & Installation
 
-You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. Choose your platform below for easy installation instructions:
+Aurora VidGrab runs perfectly across all major operating systems. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. 
 
-### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" height="24" align="absmiddle" /> Windows
+Choose your platform below:
+
+<details>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" height="24" align="absmiddle" /> Windows Installation</h3></summary>
 
 1. Install [Node.js](https://nodejs.org/) (LTS version)
 2. Install [Python](https://www.python.org/downloads/) (Make sure to check *"Add Python to PATH"* during install)
 3. Install ffmpeg (e.g., open terminal and run `winget install ffmpeg` or via [chocolatey](https://chocolatey.org): `choco install ffmpeg`)
 4. Install yt-dlp: `pip install yt-dlp`
 
-### <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" height="24" align="absmiddle" /> macOS
+</details>
+
+<details>
+<summary><h3><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" height="24" align="absmiddle" /> macOS Installation</h3></summary>
+
 *The easiest way is via [Homebrew](https://brew.sh).*
 
 ```bash
@@ -58,7 +96,10 @@ pip3 install yt-dlp
 ```
 *(If you don't use Homebrew, you can manually download [Node.js](https://nodejs.org/) and [Python](https://www.python.org/downloads/) from their official websites).*
 
-### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" height="24" align="absmiddle" /> Linux (Debian/Ubuntu)
+</details>
+
+<details>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" height="24" align="absmiddle" /> Linux (Debian/Ubuntu) Installation</h3></summary>
 
 ```bash
 sudo apt update
@@ -68,46 +109,52 @@ sudo apt install nodejs npm python3 python3-pip ffmpeg
 # Install yt-dlp
 pip3 install --user yt-dlp
 ```
+</details>
 
 ---
 
-## 🚀 Quick Start
+## 💻 Running the App
 
-Once you have the requirements installed, run these commands in your terminal:
+Once you have the requirements installed, setting up the server takes seconds:
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/SailikNanda/Aurora-Vidgrab.git
+
+# 2. Enter the directory
 cd Aurora-Vidgrab
+
+# 3. Install dependencies
 npm install
+
+# 4. Start the server
 npm start
 ```
-Now, open [http://localhost:4000](http://localhost:4000) in your browser! 🎉
-
-### Configuration (env vars)
-
-| Variable | Default | Purpose |
-|---|---|---|
-| `PORT` | `4000` | HTTP port |
-| `YTDLP_PY` | `python` / `python3` | Python interpreter that has the `yt_dlp` module |
-| `YTDLP_EXE` | *(empty)* | Use a yt-dlp executable directly (e.g. `yt-dlp.exe`) instead of `python -m yt_dlp` |
+🎉 **Boom!** Open [http://localhost:4000](http://localhost:4000) in your browser and start downloading!
 
 ---
 
-## 🔌 API Documentation
+## 🔌 API Endpoints
+
+Building your own frontend? Use our clean JSON API.
+
+<details>
+<summary><strong>View API Documentation</strong></summary>
+
+<br/>
 
 | Endpoint | Method | Description |
 |---|---|---|
-| `/api/download` | POST | `{ url, format: "video"\|"audio", quality: "480"\|"720"\|"1080"\|"best" }` → `{ id }` |
-| `/api/status/:id` | GET | Returns `{ status, percent, title, file, sizeMb, error }` |
-| `/api/file/:name` | GET | Download the finished file directly |
-| `/api/open` | GET | Open the download folder in the OS file manager (Explorer / Finder / xdg-open) |
-| `/api/clean` | POST | Delete all downloaded files |
+| `/api/download` | POST | Body: `{ url, format: "video"\|"audio", quality: "480"\|"720"\|"1080"\|"best" }`. Returns Job ID. |
+| `/api/batch` | POST | Body: `{ urls: ["url1", "url2"], ... }`. Submits multiple jobs at once. |
+| `/api/status/:id` | GET | Returns live progress: `{ status, percent, title, file, sizeMb, error }` |
+| `/api/file/:name` | GET | Directly stream or download the finished media file |
+| `/api/open` | GET | Opens the native OS file explorer to the downloads folder |
+| `/api/clean` | POST | Instantly deletes all downloaded files from the server disk |
+
+</details>
 
 ---
-
-## ⭐️ Show your support
-
-If you like this project, please consider giving it a **Star** ⭐️ on GitHub to show your support! It helps the project grow and reach more developers.
 
 ## 🗺️ Roadmap
 
@@ -117,10 +164,14 @@ If you like this project, please consider giving it a **Star** ⭐️ on GitHub 
 - [ ] Telegram bot bridge
 - [ ] AI assistant mode (natural-language "download this song" with voice)
 
+---
+
 ## ⚠️ Legal Notice
 
-This tool is for **personal and educational use**. Downloading media may violate the terms of service of some platforms or copyright law in your jurisdiction. You are responsible for how you use it. The project does not host any media — downloads happen peer-to-peer from the platform's own servers via yt-dlp.
+This tool is for **personal and educational use**. Downloading media may violate the terms of service of some platforms or copyright law in your jurisdiction. You are responsible for how you use it. The project does not host any media — downloads happen peer-to-peer from the platform's own servers via `yt-dlp`.
 
-## 📄 License
-
-[MIT](LICENSE) © Sailik Nanda
+---
+<div align="center">
+  <p>Built with ❤️ by <b>Sailik Nanda</b></p>
+  <p>Distributed under the <a href="LICENSE">MIT License</a>.</p>
+</div>
