@@ -39,14 +39,14 @@ Aurora VidGrab runs perfectly across all major operating systems.
 
 You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. Choose your platform below for easy installation instructions:
 
-### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" height="22" align="center" /> Windows
+### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" height="24" align="absmiddle" /> Windows
 
 1. Install [Node.js](https://nodejs.org/) (LTS version)
 2. Install [Python](https://www.python.org/downloads/) (Make sure to check *"Add Python to PATH"* during install)
 3. Install ffmpeg (e.g., open terminal and run `winget install ffmpeg` or via [chocolatey](https://chocolatey.org): `choco install ffmpeg`)
 4. Install yt-dlp: `pip install yt-dlp`
 
-### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg" height="24" align="center" /> macOS
+### <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" height="24" align="absmiddle" /> macOS
 *The easiest way is via [Homebrew](https://brew.sh).*
 
 ```bash
@@ -58,7 +58,7 @@ pip3 install yt-dlp
 ```
 *(If you don't use Homebrew, you can manually download [Node.js](https://nodejs.org/) and [Python](https://www.python.org/downloads/) from their official websites).*
 
-### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" height="24" align="center" /> Linux (Debian/Ubuntu)
+### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" height="24" align="absmiddle" /> Linux (Debian/Ubuntu)
 
 ```bash
 sudo apt update
