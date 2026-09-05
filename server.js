@@ -29,7 +29,34 @@ function findYtDlpPython() {
   return process.platform === 'win32' ? 'python' : 'python3';
 }
 const PY = findYtDlpPython();
-const YTDLP_EXE = process.env.YTDLP_EXE || null;
+function findYtDlpExe() {
+  if (process.env.YTDLP_EXE && fs.existsSync(process.env.YTDLP_EXE)) return process.env.YTDLP_EXE;
+  if (process.env.YTDLP_EXE) return process.env.YTDLP_EXE; // honor explicit path even if not yet verified
+  // common Windows install locations (pip --user)
+  const exeCandidates = [];
+  if (process.platform === 'win32') {
+    for (let v = 14; v >= 8; v--) {
+      exeCandidates.push(path.join(os.homedir(), 'AppData', 'Local', 'Programs', 'Python', `Python3${v}`, 'Scripts', 'yt-dlp.exe'));
+      exeCandidates.push(path.join(os.homedir(), 'AppData', 'Roaming', 'Python', `Python3${v}`, 'Scripts', 'yt-dlp.exe'));
+    }
+    exeCandidates.push(path.join(os.homedir(), 'AppData', 'Local', 'Microsoft', 'WindowsApps', 'yt-dlp.exe'));
+  }
+  for (const p of exeCandidates) {
+    try { if (fs.existsSync(p)) return p; } catch {}
+  }
+  try {
+    const whereCmd = process.platform === 'win32' ? 'where' : 'which';
+    const out = execFileSync(whereCmd, ['yt-dlp'], { encoding: 'utf8', windowsHide: true, stdio: 'pipe' }).trim().split(/\r?\n/)[0];
+    if (out && fs.existsSync(out.trim())) return out.trim();
+  } catch {}
+  try {
+    const whereCmd2 = process.platform === 'win32' ? 'where' : 'which';
+    const out2 = execFileSync(whereCmd2, ['yt-dlp.exe'], { encoding: 'utf8', windowsHide: true, stdio: 'pipe' }).trim().split(/\r?\n/)[0];
+    if (out2 && fs.existsSync(out2.trim())) return out2.trim();
+  } catch {}
+  return null;
+}
+const YTDLP_EXE = findYtDlpExe();
 
 if (!fs.existsSync(DL_DIR)) fs.mkdirSync(DL_DIR, { recursive: true });
 
