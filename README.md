@@ -4,7 +4,7 @@
   
   <br />
   
-  <h1>🌌 Aurora VidGra</h1>
+  <h1>🌌 Aurora VidGrab</h1>
   <p><strong>Premium Universal Video & Audio Downloader</strong></p>
 
   <p>
