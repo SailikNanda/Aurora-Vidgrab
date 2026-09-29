@@ -115,7 +115,7 @@ pip3 install --user yt-dlp
 
 ## 💻 Running the App
 
-Once you have the requirements installed, setting up the server takes seconds:
+Once you have the requirements installed, setting up the server takes just seconds:
 
 ```bash
 # 1. Clone the repository
