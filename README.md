@@ -168,7 +168,7 @@ Creating your own frontend? Use the clean JSON API.
 
 ## ⚠️ Legal Notice
 
-This tool is for **personal and educational use**. Downloading media may violate the terms of service of some platforms or copyright law in your jurisdiction. You are responsible for how you use it. The project does not host any media — downloads happen peer-to-peer from the platform's own servers via `yt-dlp`.
+This tool is intended for **personal and educational use**. Downloading media may violate the terms of service of some platforms or copyright law in your jurisdiction. You are responsible for how you use it. The project does not host any media — downloads happen peer-to-peer from the platform's own servers via `yt-dlp`.
 
 ---
 <div align="center">
