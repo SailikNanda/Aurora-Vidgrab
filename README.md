@@ -136,7 +136,7 @@ npm start
 
 ## 🔌 API Endpoints
 
-Building your own frontend? Use the clean JSON API.
+Creating your own frontend? Use the clean JSON API.
 
 <details>
 <summary><strong>View API Documentation</strong></summary>
