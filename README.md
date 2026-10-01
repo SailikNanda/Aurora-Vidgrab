@@ -70,7 +70,7 @@ Aurora VidGrab combines the raw power of **yt-dlp** and **ffmpeg** with a sleek,
 
 Aurora VidGrab works smoothly on all major operating systems. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. 
 
-Choose your platform below:
+Pick your platform below:
 
 <details>
 <summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" height="24" align="absmiddle" /> Windows Installation</h3></summary>
