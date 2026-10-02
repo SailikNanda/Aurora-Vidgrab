@@ -100,7 +100,7 @@ pip3 install yt-dlp
 </details>
 
 <details>
-<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" height="24" align="absmiddle" /> Linux (Debian/Ubuntu) Installation</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" height="24" align="absmiddle" /> Linux (Debian/Ubuntu) Installation</h3></summary>
 
 ```bash
 sudo apt update
