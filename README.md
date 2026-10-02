@@ -74,7 +74,7 @@ Aurora VidGrab works smoothly on all major operating systems. You will need **No
 Pick your platform below:
 
 <details>
-<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" height="24" align="absmiddle" /> Windows Installation</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" height="24" align="absmiddle" /> Windows Installation</h3></summary>
 
 1. Install [Node.js](https://nodejs.org/) (LTS version)
 2. Install [Python](https://www.python.org/downloads/) (Make sure to check *"Add Python to PATH"* during install)
