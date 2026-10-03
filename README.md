@@ -95,7 +95,7 @@ brew install node python ffmpeg
 # Install yt-dlp
 pip3 install yt-dlp
 ```
-*(If you don't use Homebrew, you can manually download [Node.js](https://nodejs.org/) and [Python](https://www.python.org/downloads/) from their official websites).*
+*(If you do not use Homebrew, you can manually download [Node.js](https://nodejs.org/) and [Python](https://www.python.org/downloads/) from their official websites).*
 
 </details>
 
