@@ -89,7 +89,7 @@ Choose your platform below:
 <details>
 <summary><h3><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" height="24" align="absmiddle" /> macOS Installation</h3></summary>
 
-*The easiest way is via [Homebrew](https://brew.sh).*
+*The simplest way is via [Homebrew](https://brew.sh).*
 
 ```bash
 # Install Node.js, Python, and ffmpeg
