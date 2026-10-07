@@ -39,7 +39,7 @@ Aurora VidGrab combines the **raw power** of **yt-dlp** and **ffmpeg** with a sl
 - **Aurora Glass:** Rotating borders, shine sweeps, and spring pops.
 - **Zero Emoji UI:** Pure, crisp SVG icons.
 - **Responsive:** Runs beautifully on both mobile and desktop.
-- **Live Preview:** Watch your downloaded video right in the browser.
+- **Live Preview:** Watch your downloaded video directly in the browser.
 
 </td>
 <td>
