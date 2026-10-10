@@ -7,7 +7,7 @@
   <br />
   
   <h1>🌌 Aurora VidGrab</h1>
-  <p><strong>Premium Universal Video & Audio Downloader</strong></p>
+  <p><strong>Premium Universal Video and Audio Downloader</strong></p>
 
   <p>
     <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github&label=Stars" alt="Stars"></a>
