@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api" alt="divider" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:5e6ad2,50:7170ff,100:828fff&height=3&width=100%" alt="divider" />
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="55" />
@@ -10,12 +10,13 @@
   <p><strong>Premium Universal Video and Audio Downloader</strong></p>
 
   <p>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab" alt="Stars"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/network/members"><img src="https://img.shields.io/github/forks/SailikNanda/Aurora-Vidgrab" alt="Forks"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/issues"><img src="https://img.shields.io/github/issues/SailikNanda/Aurora-Vidgrab" alt="Issues"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981" alt="License"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/releases"><img src="https://img.shields.io/github/downloads/SailikNanda/Aurora-Vidgrab/total" alt="Downloads"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/commits/main"><img src="https://img.shields.io/github/last-commit/SailikNanda/Aurora-Vidgrab" alt="Last commit"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github&label=Stars" alt="Stars"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/network/members"><img src="https://img.shields.io/github/forks/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Forks"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/issues"><img src="https://img.shields.io/github/issues/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github" alt="Issues"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/releases"><img src="https://img.shields.io/github/downloads/SailikNanda/Aurora-Vidgrab/total?style=for-the-badge&color=5e6ad2&logo=github&label=Downloads" alt="Downloads"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/commits/main"><img src="https://img.shields.io/github/last-commit/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github&label=Last%20Commit" alt="Last commit"></a>
+    <img src="https://img.shields.io/badge/Sites-1750%2B-5e6ad2?style=for-the-badge" alt="1750+ supported sites">
   </p>
 
   <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok, and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
@@ -59,13 +60,13 @@ Aurora VidGrab combines the **raw power** of **yt-dlp** and **ffmpeg** with a sl
 ## 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express.js-000000" alt="Express.js" />
-  <img src="https://img.shields.io/badge/Python-3776AB" alt="Python" />
-  <img src="https://img.shields.io/badge/yt--dlp-FF0000" alt="yt-dlp" />
-  <img src="https://img.shields.io/badge/FFmpeg-007808" alt="FFmpeg" />
-  <img src="https://img.shields.io/badge/Vanilla_JS-F7DF1E" alt="Vanilla JS" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/yt--dlp-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="yt-dlp" />
+  <img src="https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white" alt="FFmpeg" />
+  <img src="https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Vanilla JS" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
 </p>
 
 ---
