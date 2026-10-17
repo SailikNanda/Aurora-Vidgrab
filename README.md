@@ -48,7 +48,7 @@ Aurora VidGrab combines the **raw power** of **yt-dlp** and **ffmpeg** with a sl
 <td>
 
 ### ⚡ Under the Hood
-- **1750+ Sites:** YouTube, Instagram Reels, TikTok, Reddit, and more.
+- **1750+ Sites:** YouTube, Instagram Reels, TikTok, Reddit and more.
 - **Smart Queueing:** Concurrent batch downloading without crashing.
 - **Memory Safe:** Automatic cleanup of stale jobs and files.
 - **API First:** A pure JSON API with no messy HTML errors.
