@@ -179,7 +179,7 @@ This tool is intended for **personal and educational use**. Downloading media ma
 
 ---
 <div align="center">
-  <p>Created with ❤️ by <b>Sailik Nanda</b></p>
+  <p>Built with ❤️ by <b>Sailik Nanda</b></p>
   <p>Distributed under the <a href="LICENSE">MIT License</a>.</p>
 </div>
 
