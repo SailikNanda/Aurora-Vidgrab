@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/Sites-1750%2B-5e6ad2?style=for-the-badge" alt="1750+ supported sites">
   </p>
 
-  <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok, and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
+  <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
 </div>
 
 <br />
