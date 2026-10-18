@@ -169,7 +169,7 @@ Building your own frontend? Use the **clean JSON API**.
 
 - [ ] Cookies support (`--cookies-from-browser`) for private/age-restricted content
 - [ ] Format picker (resolution/size preview before download)
-- [ ] Download history & library page
+- [ ] Download history and library page
 - [ ] Telegram bot bridge
 - [ ] AI assistant mode (natural-language "download this song" with voice)
 
