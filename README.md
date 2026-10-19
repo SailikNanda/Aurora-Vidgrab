@@ -77,7 +77,7 @@
 
 ## 📦 Requirements and Installation
 
-Aurora VidGrab runs smoothly on **all major operating systems**. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. 
+Aurora VidGrab runs smoothly across **all major operating systems**. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. 
 
 Pick your platform below:
 
