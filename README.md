@@ -185,4 +185,4 @@ This tool is intended for **personal and educational use**. Downloading media ma
   <p>Distributed under the <a href="LICENSE">MIT License</a>.</p>
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5e6ad2,50:7170ff,100:828fff&height=120&section=footer" alt="footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5e6ad2,50:7170ff,100:828fff&height=120&section=footer" alt="footer" loading="lazy" decoding="async" />
