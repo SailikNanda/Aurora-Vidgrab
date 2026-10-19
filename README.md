@@ -23,7 +23,7 @@
     <img src="https://img.shields.io/github/repo-size/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Repo size">
   </p>
 
-  <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok, and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
+  <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
 </div>
 
 <br />
