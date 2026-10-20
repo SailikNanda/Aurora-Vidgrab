@@ -21,6 +21,7 @@
     <img src="https://img.shields.io/badge/Sites-1750%2B-5e6ad2?style=for-the-badge" alt="1750+ supported sites">
     <img src="https://img.shields.io/github/languages/top/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github" alt="Top language">
     <img src="https://img.shields.io/github/repo-size/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Repo size">
+    <img src="https://img.shields.io/badge/Platform-Cross--Platform-5e6ad2?style=for-the-badge" alt="Cross-platform">
   </p>
 
   <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok, and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
