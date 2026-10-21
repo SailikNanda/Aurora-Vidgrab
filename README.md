@@ -1,6 +1,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:5e6ad2,50:7170ff,100:828fff&height=140&section=header&text=Aurora%20VidGrab&fontSize=40&fontColor=ffffff&fontAlignY=38" alt="Aurora VidGrab banner" loading="lazy" decoding="async" />
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:5e6ad2,50:7170ff,100:828fff&height=3&width=100%" alt="divider" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:5e6ad2,50:7170ff,100:828fff&height=3&width=100%" alt="divider" loading="lazy" decoding="async" />
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="55" loading="lazy" decoding="async" />
