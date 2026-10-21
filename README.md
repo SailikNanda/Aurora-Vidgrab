@@ -80,7 +80,7 @@
 
 Aurora VidGrab runs smoothly across **all major operating systems**. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. 
 
-Choose your platform below:
+Pick your platform below:
 
 <details>
 <summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" height="24" align="absmiddle" /> Windows Installation</h3></summary>
