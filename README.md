@@ -15,10 +15,10 @@
     <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github&label=Stars" alt="Stars" loading="lazy" decoding="async"></a>
     <a href="https://github.com/SailikNanda/Aurora-Vidgrab/network/members"><img src="https://img.shields.io/github/forks/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Forks" loading="lazy" decoding="async"></a>
     <a href="https://github.com/SailikNanda/Aurora-Vidgrab/issues"><img src="https://img.shields.io/github/issues/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github" alt="Issues" loading="lazy" decoding="async"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" loading="lazy" decoding="async"></a>
     <a href="https://github.com/SailikNanda/Aurora-Vidgrab/releases"><img src="https://img.shields.io/github/downloads/SailikNanda/Aurora-Vidgrab/total?style=for-the-badge&color=5e6ad2&logo=github&label=Downloads" alt="Downloads"></a>
     <a href="https://github.com/SailikNanda/Aurora-Vidgrab/commits/main"><img src="https://img.shields.io/github/last-commit/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github&label=Last%20Commit" alt="Last commit"></a>
-    <img src="https://img.shields.io/badge/Sites-1750%2B-5e6ad2?style=for-the-badge" alt="1750+ supported sites">
+    <img src="https://img.shields.io/badge/Sites-1750%2B-5e6ad2?style=for-the-badge" alt="1750+ supported sites" loading="lazy" decoding="async">
     <img src="https://img.shields.io/github/languages/top/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github" alt="Top language">
     <img src="https://img.shields.io/github/repo-size/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Repo size">
     <img src="https://img.shields.io/badge/Platform-Cross--Platform-5e6ad2?style=for-the-badge" alt="Cross-platform">
