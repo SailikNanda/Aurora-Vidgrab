@@ -83,7 +83,7 @@ Aurora VidGrab runs smoothly on **all major operating systems**. You will need *
 Choose your platform below:
 
 <details>
-<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" height="24" align="absmiddle" /> Windows Installation</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" height="24" align="absmiddle" loading="lazy" decoding="async" /> Windows Installation</h3></summary>
 
 1. Install [Node.js](https://nodejs.org/) (LTS version)
 2. Install [Python](https://www.python.org/downloads/) (Make sure to check *"Add Python to PATH"* during install)
@@ -93,7 +93,7 @@ Choose your platform below:
 </details>
 
 <details>
-<summary><h3><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" height="24" align="absmiddle" /> macOS Installation</h3></summary>
+<summary><h3><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" height="24" align="absmiddle" loading="lazy" decoding="async" /> macOS Installation</h3></summary>
 
 *The straightforward route is via [Homebrew](https://brew.sh).*
 
@@ -109,7 +109,7 @@ pip3 install yt-dlp
 </details>
 
 <details>
-<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" height="24" align="absmiddle" /> Linux (Debian/Ubuntu) Installation</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" height="24" align="absmiddle" loading="lazy" decoding="async" /> Linux (Debian/Ubuntu) Installation</h3></summary>
 
 ```bash
 sudo apt update
