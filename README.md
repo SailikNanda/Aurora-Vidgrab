@@ -140,7 +140,7 @@ npm install
 # 4. Start the server
 npm start
 ```
-🎉 **Boom!** Open [http://localhost:4000](http://localhost:4000) in your browser and start downloading!
+🎉 **Boom!** Open [http://localhost:4000](http://localhost:4000) in your browser and begin downloading!
 
 ---
 
