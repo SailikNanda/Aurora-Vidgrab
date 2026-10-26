@@ -29,7 +29,7 @@
 
 <br />
 
-> **Note:** If you find this project useful, please consider leaving a ⭐ **Star** on **GitHub** to show your support!
+> **Note:** If you find this project useful, consider leaving a ⭐ **Star** on **GitHub** to show your support!
 
 ---
 
