@@ -42,7 +42,7 @@
 <td>
 
 ### 🎨 Premium UI
-- **Aurora Glass:** Rotating borders, shine sweeps, and spring pops.
+- **Aurora Glass:** Rotating borders, shine sweeps and spring pops.
 - **Zero Emoji UI:** Pure, crisp SVG icons.
 - **Responsive:** Runs beautifully on both **mobile** and **desktop**.
 - **Live Preview:** View your downloaded video directly in the browser.
