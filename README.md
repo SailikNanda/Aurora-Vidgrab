@@ -53,7 +53,7 @@
 ### ⚡ Under the Hood
 - **1750+ Sites:** YouTube, Instagram Reels, TikTok, Reddit, and more.
 - **Smart Queueing:** Concurrent batch downloads without crashing.
-- **Memory Safe:** Automatic cleanup of stale jobs and files.
+- **Memory Safe:** Automatic clean-up of stale jobs and files.
 - **API First:** A pure JSON API with no messy HTML errors.
 
 </td>
