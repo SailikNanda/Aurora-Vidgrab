@@ -168,7 +168,7 @@ Building your own frontend? Use the **tidy JSON API**.
 
 ## 🗺️ Roadmap
 
-- [ ] Cookies support (`--cookies-from-browser`) for private/age-restricted content
+- [ ] Cookies support (`--cookies-from-browser`) for private or age-restricted content
 - [ ] Format picker (resolution/size preview before download)
 - [ ] Download history and library page
 - [ ] Telegram bot bridge
