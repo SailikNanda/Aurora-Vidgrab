@@ -86,7 +86,7 @@ Choose your platform below:
 <summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" height="24" align="absmiddle" loading="lazy" decoding="async" /> Windows Installation</h3></summary>
 
 1. Install [Node.js](https://nodejs.org/) (the LTS version)
-2. Install [Python](https://www.python.org/downloads/) (Make sure to check *"Add Python to PATH"* during install)
+2. Install [Python](https://www.python.org/downloads/) (Make sure to tick *"Add Python to PATH"* during install)
 3. Install ffmpeg (e.g., open terminal and run `winget install ffmpeg` or via [chocolatey](https://chocolatey.org): `choco install ffmpeg`)
 4. Install yt-dlp: `pip install yt-dlp`
 
