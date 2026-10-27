@@ -35,7 +35,7 @@
 
 ## 🚀 Why Aurora VidGrab?
 
-**Aurora VidGrab** combines the **raw power** of **yt-dlp** and **ffmpeg** with a sleek, modern **Node.js** backend and a beautiful **Glassmorphism** frontend. No databases, no bloat — just paste a link and download.
+**Aurora VidGrab** combines the **raw power** of **yt-dlp** and **ffmpeg** with a sleek, modern **Node.js** backend and a beautiful **Glassmorphism** frontend. No databases and **no bloat** — just paste a link and download.
 
 <table>
 <tr>
@@ -95,7 +95,7 @@ Choose your platform from the list below:
 <details>
 <summary><h3><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" height="24" align="absmiddle" loading="lazy" decoding="async" /> macOS Installation</h3></summary>
 
-*The simple route is via [Homebrew](https://brew.sh).*
+*The straightforward route is via [Homebrew](https://brew.sh).*
 
 ```bash
 # Install Node.js, Python, and ffmpeg
