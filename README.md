@@ -35,7 +35,7 @@
 
 ## 🚀 Why Aurora VidGrab?
 
-**Aurora VidGrab** combines the **raw power** of **yt-dlp** and **ffmpeg** with a sleek, modern **Node.js** backend and a beautiful **Glassmorphism** frontend. No databases and **no bloat** — just paste a link and download.
+**Aurora VidGrab** combines the **raw power** of **yt-dlp** and **ffmpeg** with a sleek, modern **Node.js** backend and a beautiful **Glassmorphism** frontend. No databases, no bloat — just paste a link and download.
 
 <table>
 <tr>
@@ -146,7 +146,7 @@ npm start
 
 ## 🔌 API Endpoints
 
-Building your own frontend? Use the **clean JSON API**.
+Building your own frontend? Use the **tidy JSON API**.
 
 <details>
 <summary><strong>View API Documentation</strong></summary>
