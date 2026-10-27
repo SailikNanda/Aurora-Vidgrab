@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/badge/Platform-Cross--Platform-5e6ad2?style=for-the-badge" alt="Cross-platform" loading="lazy" decoding="async">
   </p>
 
-  <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok, and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
+  <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
 </div>
 
 <br />
@@ -125,7 +125,7 @@ pip3 install --user yt-dlp
 
 ## 💻 Running the App
 
-Once the requirements are installed, setting up the server takes only a few seconds:
+Once the requirements are installed, setting up the server takes just a few seconds:
 
 ```bash
 # 1. Clone the repository
