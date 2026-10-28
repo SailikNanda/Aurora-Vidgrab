@@ -178,6 +178,8 @@ Building your own frontend? Use the **tidy JSON API**.
 
 ---
 
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:5e6ad2,50:7170ff,100:828fff&height=3&width=100%" alt="divider" loading="lazy" decoding="async" />
+
 ## ⚠️ Legal Notice
 
 This tool is intended for **personal and educational use**. Downloading media may violate the terms of service of some platforms or copyright law in your jurisdiction. You are responsible for how you use this tool. The project does not host any media — downloads happen peer-to-peer from the platform's own servers via `yt-dlp`.
