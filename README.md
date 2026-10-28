@@ -166,6 +166,8 @@ Building your own frontend? Use the **tidy JSON API**.
 
 ---
 
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:5e6ad2,50:7170ff,100:828fff&height=3&width=100%" alt="divider" loading="lazy" decoding="async" />
+
 ## 🗺️ Roadmap
 
 - [ ] Cookies support (`--cookies-from-browser`) for private or age-restricted content
