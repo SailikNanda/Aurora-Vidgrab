@@ -131,6 +131,19 @@ pip3 install --user yt-dlp
 ```
 </details>
 
+## 🗂️ Project Structure
+
+```text
+Aurora-Vidgrab/
+├── server.js          # Express server: download jobs, queueing, JSON API
+├── public/
+│   ├── index.html     # Aurora Glass UI
+│   ├── app.js         # Frontend logic and live progress
+│   └── style.css      # Glassmorphism styling
+├── downloads/         # Finished media lands here
+└── package.json       # Dependencies and the `start` script
+```
+
 ---
 
 ## 💻 Running the App
