@@ -31,6 +31,16 @@
 
 > **Note:** If you find this project useful, consider leaving a ⭐ **Star** on **GitHub** to show your support!
 
+<p align="center">
+  <a href="#-why-aurora-vidgrab">Why</a> &nbsp;·&nbsp;
+  <a href="#%EF%B8%8F-tech-stack">Stack</a> &nbsp;·&nbsp;
+  <a href="#-requirements-and-installation">Install</a> &nbsp;·&nbsp;
+  <a href="#-running-the-app">Run</a> &nbsp;·&nbsp;
+  <a href="#-api-endpoints">API</a> &nbsp;·&nbsp;
+  <a href="#%EF%B8%8F-roadmap">Roadmap</a> &nbsp;·&nbsp;
+  <a href="#%EF%B8%8F-legal-notice">Legal</a>
+</p>
+
 ---
 
 ## 🚀 Why Aurora VidGrab?
