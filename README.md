@@ -93,7 +93,7 @@ Choose your platform from the list below:
 </details>
 
 <details>
-<summary><h3><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" height="24" align="absmiddle" loading="lazy" decoding="async" /> macOS Installation</h3></summary>
+<summary><h3><picture><source media="(prefers-color-scheme: dark)" srcset="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" /><source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" /><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" height="24" align="absmiddle" loading="lazy" decoding="async" /></picture> macOS Installation</h3></summary>
 
 *The straightforward route is via [Homebrew](https://brew.sh).*
 
