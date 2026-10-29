@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5e6ad2,50:7170ff,100:828fff&height=140&section=header&text=Aurora%20VidGrab&fontSize=40&fontColor=ffffff&fontAlignY=38" alt="Aurora VidGrab banner" loading="lazy" decoding="async" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:5e6ad2,50:7170ff,100:828fff&height=140&section=header&text=Aurora%20VidGrab&fontSize=40&fontColor=ffffff&fontAlignY=38" alt="Aurora VidGrab banner" width="100%" loading="lazy" decoding="async" />
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:5e6ad2,50:7170ff,100:828fff&height=3&width=100%" alt="divider" loading="lazy" decoding="async" />
 
