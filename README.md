@@ -186,6 +186,7 @@ Building your own frontend? Use the **tidy JSON API**.
 |---|---|---|
 | `/api/download` | POST | Body: `{ url, format: "video"\|"audio", quality: "480"\|"720"\|"1080"\|"best" }`. Returns Job ID. |
 | `/api/batch` | POST | Body: `{ urls: ["url1", "url2"], ... }`. Submits multiple jobs at once. |
+| `/api/batch/:batchId` | GET | Returns progress for a whole batch: `{ batchId, total, done, jobs[] }` |
 | `/api/status/:id` | GET | Returns live progress: `{ status, percent, title, file, sizeMb, error }` |
 | `/api/file/:name` | GET | Directly stream or download the finished media file |
 | `/api/open` | GET | Opens the native OS file explorer to the downloads folder |
