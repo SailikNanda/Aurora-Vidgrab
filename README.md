@@ -139,6 +139,8 @@ pip3 install --user yt-dlp
 ```
 </details>
 
+---
+
 ## 🗂️ Project Structure
 
 ```text
