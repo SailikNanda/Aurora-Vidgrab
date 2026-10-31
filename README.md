@@ -207,7 +207,7 @@ Building your own frontend? Use the **tidy JSON API**.
 | `/api/status/:id` | GET | Returns live progress: `{ status, percent, title, file, sizeMb, error }` |
 | `/api/file/:name` | GET | Directly stream or download the finished media file |
 | `/api/open` | GET | Opens the native OS file explorer to the downloads folder |
-| `/api/clean` | GET | Instantly deletes all downloaded files from the server disk |
+| `/api/clean` | GET | Instantly deletes all downloaded files from the server disk and returns `{ removed }` with the number of files deleted |
 
 </details>
 
