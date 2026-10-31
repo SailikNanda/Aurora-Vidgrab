@@ -37,6 +37,7 @@
   <a href="#-requirements-and-installation">Install</a> &nbsp;·&nbsp;
   <a href="#-running-the-app">Run</a> &nbsp;·&nbsp;
   <a href="#%EF%B8%8F-project-structure">Structure</a> &nbsp;·&nbsp;
+  <a href="#%EF%B8%8F-configuration">Config</a> &nbsp;·&nbsp;
   <a href="#-api-endpoints">API</a> &nbsp;·&nbsp;
   <a href="#%EF%B8%8F-roadmap">Roadmap</a> &nbsp;·&nbsp;
   <a href="#%EF%B8%8F-legal-notice">Legal</a>
