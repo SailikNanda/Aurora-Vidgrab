@@ -173,6 +173,12 @@ npm start
 
 ---
 
+## ⚙️ Configuration
+
+The server listens on port `4000` by default — set the `PORT` environment variable to change it. Finished media is written to the `downloads/` folder next to `server.js` and is also served at `/downloads`. Every `/api` route replies with JSON, including 404s and errors, so a scripted client never has to parse an HTML error page.
+
+---
+
 ## 🔌 API Endpoints
 
 Building your own frontend? Use the **tidy JSON API**.
