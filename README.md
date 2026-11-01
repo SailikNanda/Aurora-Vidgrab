@@ -188,6 +188,8 @@ Two further optional variables decide which `yt-dlp` the server runs:
 | `YTDLP_EXE` | auto-detected | Full path to a `yt-dlp` executable; skips the Python module probe |
 | `YTDLP_PY` | auto-detected | Python interpreter that already has the `yt_dlp` module installed |
 
+**Jobs and concurrency.** At most **3** downloads run at a time; the rest wait in the queue and start as slots free up. Job records are kept in memory for **24 hours** after they finish and are pruned hourly, so restarting the server clears the job history and the UI asks you to press Download again.
+
 ---
 
 ## 🔌 API Endpoints
