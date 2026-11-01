@@ -211,6 +211,8 @@ Building your own frontend? Use the **tidy JSON API**.
 
 </details>
 
+**Batches and playlists.** A link that carries a `list=` parameter is expanded into its individual videos (up to **50** per playlist), and a single batch accepts up to **100** jobs — anything past that is ignored. Links that are not `http(s)` are dropped, and a batch that resolves to nothing returns a JSON `400` instead of an empty job list.
+
 ---
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:5e6ad2,50:7170ff,100:828fff&height=3&width=100%" alt="divider" loading="lazy" decoding="async" />
