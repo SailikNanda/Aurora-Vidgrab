@@ -92,7 +92,7 @@
 
 Aurora VidGrab runs smoothly on **all major operating systems**. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**.
 
-Choose your platform from the list below:
+Choose your platform from the list below — `yt-dlp` calls `ffmpeg` to merge the separate video and audio streams into the final file, so `ffmpeg` has to be on the `PATH` of the shell that starts the server.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-%E2%89%A5%2018-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js 18 or newer" loading="lazy" decoding="async" />
