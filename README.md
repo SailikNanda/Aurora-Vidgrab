@@ -5,9 +5,9 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="55" loading="lazy" decoding="async" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="55" loading="lazy" decoding="async" />
-  
+
   <br />
-  
+
   <h1>🌌 Aurora VidGrab</h1>
   <p><strong>Premium Universal Video and Audio Downloader</strong></p>
 
@@ -90,7 +90,7 @@
 
 ## 📦 Requirements and Installation
 
-Aurora VidGrab runs smoothly on **all major operating systems**. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**. 
+Aurora VidGrab runs smoothly on **all major operating systems**. You will need **Node.js (≥ 18)**, **Python (≥ 3.8)**, and **ffmpeg**.
 
 Choose your platform from the list below:
 
