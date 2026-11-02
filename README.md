@@ -51,7 +51,7 @@
 
 <table>
 <tr>
-<td>
+<td width="50%">
 
 ### 🎨 Premium UI
 - **Aurora Glass:** Rotating borders, shine sweeps and spring pops.
@@ -60,7 +60,7 @@
 - **Live Preview:** View the downloaded video directly in the browser.
 
 </td>
-<td>
+<td width="50%">
 
 ### ⚡ Under the Hood
 - **1750+ Sites:** YouTube, Instagram Reels, TikTok, Reddit, and more.
