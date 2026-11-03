@@ -58,6 +58,7 @@
 - **Zero Emoji UI:** Pure and crisp SVG icons.
 - **Responsive:** Runs beautifully on both **mobile** and **desktop**.
 - **Live Preview:** View the downloaded video directly in the browser.
+- **File actions:** Save any finished download, open the downloads folder, or clear every file from the server in one click.
 
 </td>
 <td width="50%">
