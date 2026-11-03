@@ -59,6 +59,7 @@
 - **Responsive:** Runs beautifully on both **mobile** and **desktop**.
 - **Live Preview:** View the downloaded video directly in the browser.
 - **File actions:** Save any finished download, open the downloads folder, or clear every file from the server in one click.
+- **Quality presets:** Choose 1080p, 720p, 480p or Best from the picker before you download.
 
 </td>
 <td width="50%">
