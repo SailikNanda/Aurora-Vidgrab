@@ -40,6 +40,7 @@
   <a href="#%EF%B8%8F-configuration">Config</a> &nbsp;·&nbsp;
   <a href="#-api-endpoints">API</a> &nbsp;·&nbsp;
   <a href="#%EF%B8%8F-roadmap">Roadmap</a> &nbsp;·&nbsp;
+  <a href="#-troubleshooting">Fixes</a> &nbsp;·&nbsp;
   <a href="#%EF%B8%8F-legal-notice">Legal</a>
 </p>
 
