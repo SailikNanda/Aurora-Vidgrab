@@ -179,6 +179,38 @@ npm start
 
 ---
 
+## 🔧 Troubleshooting
+
+<details>
+<summary><strong>The server starts, but every download fails</strong></summary>
+
+`yt-dlp` calls `ffmpeg` to merge the separate video and audio streams, so `ffmpeg` has to be on the `PATH` of the shell that starts the server. Open a new terminal after installing it and start the server again.
+
+</details>
+
+<details>
+<summary><strong><code>yt-dlp</code> is installed but is not found</strong></summary>
+
+The server probes for a `yt-dlp` executable and then for the Python module. If neither probe finds your install, point it at the right one with `YTDLP_EXE` (full path to the executable) or `YTDLP_PY` (an interpreter that already has the `yt_dlp` module).
+
+</details>
+
+<details>
+<summary><strong>Port 4000 is already in use</strong></summary>
+
+Set the `PORT` environment variable before starting the server and open that port in the browser instead.
+
+</details>
+
+<details>
+<summary><strong>A download disappeared from the UI after a restart</strong></summary>
+
+Job records are kept in memory for 24 hours and a restart clears them, so the page asks you to press Download again. The finished file is still in the `downloads/` folder, which is also served at `/downloads`.
+
+</details>
+
+---
+
 ## ⚙️ Configuration
 
 The server listens on port `4000` by default — set the `PORT` environment variable to change it. Finished media is written to the `downloads/` folder next to `server.js` and is also served at `/downloads`. The folder is created automatically on first start if it is missing. Every `/api` route replies with JSON, including 404s and errors, so a scripted client never has to parse an HTML error page. `format: "audio"` extracts the best audio stream to **MP3**, while `format: "video"` merges the best video and audio streams into **MP4**, capped at the requested `quality` height.
