@@ -138,7 +138,8 @@ sudo apt update
 sudo apt install nodejs npm python3 python3-pip ffmpeg
 
 # Install yt-dlp
-pip3 install --user yt-dlp````
+pip3 install --user yt-dlp
+```
 </details>
 
 ---
