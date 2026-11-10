@@ -104,7 +104,7 @@ Choose your platform from the list below — `yt-dlp` calls `ffmpeg` to merge th
 </p>
 
 <details>
-<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" width="24" height="24" align="absmiddle" loading="lazy" decoding="async" /> Windows Installation</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg" alt="Windows" width="24" height="24" align="middle" loading="lazy" decoding="async" /> Windows Installation</h3></summary>
 
 1. Install [Node.js](https://nodejs.org/) (the LTS version)
 2. Install [Python](https://www.python.org/downloads/) (Make sure to tick *"Add Python to PATH"* during install)
@@ -114,7 +114,7 @@ Choose your platform from the list below — `yt-dlp` calls `ffmpeg` to merge th
 </details>
 
 <details>
-<summary><h3><picture><source media="(prefers-color-scheme: dark)" srcset="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" /><source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" /><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" width="24" height="24" align="absmiddle" loading="lazy" decoding="async" /></picture> macOS Installation</h3></summary>
+<summary><h3><picture><source media="(prefers-color-scheme: dark)" srcset="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" /><source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" /><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="macOS" width="24" height="24" align="middle" loading="lazy" decoding="async" /></picture> macOS Installation</h3></summary>
 
 *The straightforward route is via [Homebrew](https://brew.sh).*
 
@@ -130,7 +130,7 @@ pip3 install yt-dlp
 </details>
 
 <details>
-<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" width="24" height="24" align="absmiddle" loading="lazy" decoding="async" /> Linux (Debian/Ubuntu) Installation</h3></summary>
+<summary><h3><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" width="24" height="24" align="middle" loading="lazy" decoding="async" /> Linux (Debian/Ubuntu) Installation</h3></summary>
 
 ```bash
 sudo apt update
