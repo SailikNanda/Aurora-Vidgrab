@@ -12,16 +12,16 @@
   <p><strong>Premium Universal Video and Audio Downloader</strong></p>
 
   <p>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github&label=Stars" alt="Stars" loading="lazy" decoding="async"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/network/members"><img src="https://img.shields.io/github/forks/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Forks" loading="lazy" decoding="async"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/issues"><img src="https://img.shields.io/github/issues/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github" alt="Issues" loading="lazy" decoding="async"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" loading="lazy" decoding="async"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/releases"><img src="https://img.shields.io/github/downloads/SailikNanda/Aurora-Vidgrab/total?style=for-the-badge&color=5e6ad2&logo=github&label=Downloads" alt="Downloads" loading="lazy" decoding="async"></a>
-    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/commits/main"><img src="https://img.shields.io/github/last-commit/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github&label=Last%20Commit" alt="Last commit" loading="lazy" decoding="async"></a>
-    <img src="https://img.shields.io/badge/Sites-1750%2B-5e6ad2?style=for-the-badge" alt="1750+ supported sites" loading="lazy" decoding="async">
-    <img src="https://img.shields.io/github/languages/top/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github" alt="Top language" loading="lazy" decoding="async">
-    <img src="https://img.shields.io/github/repo-size/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Repo size" loading="lazy" decoding="async">
-    <img src="https://img.shields.io/badge/Platform-Cross--Platform-5e6ad2?style=for-the-badge" alt="Cross-platform" loading="lazy" decoding="async">
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/stargazers"><img src="https://img.shields.io/github/stars/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github&label=Stars" alt="Stars" loading="lazy" decoding="async" height="28"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/network/members"><img src="https://img.shields.io/github/forks/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Forks" loading="lazy" decoding="async" height="28"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/issues"><img src="https://img.shields.io/github/issues/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github" alt="Issues" loading="lazy" decoding="async" height="28"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" loading="lazy" decoding="async" height="28"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/releases"><img src="https://img.shields.io/github/downloads/SailikNanda/Aurora-Vidgrab/total?style=for-the-badge&color=5e6ad2&logo=github&label=Downloads" alt="Downloads" loading="lazy" decoding="async" height="28"></a>
+    <a href="https://github.com/SailikNanda/Aurora-Vidgrab/commits/main"><img src="https://img.shields.io/github/last-commit/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=828fff&logo=github&label=Last%20Commit" alt="Last commit" loading="lazy" decoding="async" height="28"></a>
+    <img src="https://img.shields.io/badge/Sites-1750%2B-5e6ad2?style=for-the-badge" alt="1750+ supported sites" loading="lazy" decoding="async" height="28">
+    <img src="https://img.shields.io/github/languages/top/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=5e6ad2&logo=github" alt="Top language" loading="lazy" decoding="async" height="28">
+    <img src="https://img.shields.io/github/repo-size/SailikNanda/Aurora-Vidgrab?style=for-the-badge&color=7170ff&logo=github" alt="Repo size" loading="lazy" decoding="async" height="28">
+    <img src="https://img.shields.io/badge/Platform-Cross--Platform-5e6ad2?style=for-the-badge" alt="Cross-platform" loading="lazy" decoding="async" height="28">
   </p>
 
   <p><em>Download media from <b>1750+ sites</b>, including YouTube, Instagram, TikTok, and X, wrapped in a <strong>buttery-smooth</strong> Aurora Glass UI.</em></p>
